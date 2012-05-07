@@ -11,3 +11,26 @@ body, #index {
     }
   }
 }
+
+
+body, #prensa {
+
+  .content {
+    width:960px;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+  
+    .wrapper {
+      width:1934px;
+      height:525px;
+      .imagenes{
+        display:inline-block;
+        list-style:none;
+        float:left;
+        height:525px;
+        width:auto;
+      }
+    }
+  }
+}
