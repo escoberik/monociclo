@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %title PrimerProyecto
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body{ class: "#{params[:controller]} #{params[:action]}" }
+    #maindiv
+      %ul#menu
+        %li
+          %a{:href=>""} INICIO
+        %li
+          %a{:href=>""} QUIENES SOMOS
+        %li.logo
+          = image_tag("menucenter.bmp")
+        %li
+          %a{:href=>""} PRENSA
+        %li
+          %a{:href=>""} CONTACTO
+      =yield
+      #footer
+        #socialbookmarts
+          %li
+            = image_tag("twitter.bmp")
+          %li
+            = image_tag("facebook.bmp")
+          %li
+            = image_tag("blogger.bmp")
+

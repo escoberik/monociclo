@@ -1,0 +1,56 @@
+/*
+ *= require_tree ../../../vendor/assets/stylesheets
+ *= require_self
+ *= require_tree .
+*/
+
+@font-face {
+	font-family: 'FuturaBT-Book';
+	src:url(FuturaBT-Book.otf);
+}
+body {
+  #maindiv {
+  width:960px;
+  margin: 0 auto;
+    #menu {
+      width:960px;
+      text-align:center;
+      margin-top: 15px;
+      height:61px;
+      li {
+        display:inline-block;
+	list-style:none;
+	margin:0px 7px;
+	  img {
+	    vertical-align: middle;
+	  }
+	  a {
+	    text-decoration:none;
+	    font-family: "FuturaBT-Book";	
+	    font-size: 11px;
+	    letter-spacing: 3px; 
+	    color:#B0B0B0;
+	    font-weight:bold;
+	  }
+       }
+    }
+    #footer {
+      width:960px;
+      #socialbookmarts {
+        height:30px;
+        width:85px;
+        float: right;
+        text-align:center;
+        margin: 20px 4px;
+
+	li {
+          height:27px;
+          width:27px;
+          display:inline-block;
+          list-style:none;
+          float:left;
+        }
+      }
+    }
+  }      
+}
