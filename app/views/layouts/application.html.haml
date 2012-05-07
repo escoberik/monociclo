@@ -9,13 +9,13 @@
     #maindiv
       %ul#menu
         %li
-          %a{:href=>""} INICIO
+          = link_to "INICIO", root_path
         %li
           %a{:href=>""} QUIENES SOMOS
         %li.logo
           = image_tag("menucenter.bmp")
         %li
-          %a{:href=>""} PRENSA
+          = link_to "PRENSA", prensa_path
         %li
           %a{:href=>""} CONTACTO
       =yield
