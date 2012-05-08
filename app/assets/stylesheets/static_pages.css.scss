@@ -1,10 +1,12 @@
-body.index {
-  .content {
-    width:960px;
-    margin:0px;
-    padding:0px;
+@font-face {
+  font-family: 'FuturaBT-Book';
+  src:url(FuturaBT-Book.otf);
+}
 
-    .wrapper {
+body.index {
+  .wrapper {
+    width:960px;
+    .content {
       width:960px;
       height:525px;
     }
@@ -14,13 +16,11 @@ body.index {
 
 body.prensa {
 
-  .content {
+  .wrapper {
     width:960px;
-    margin:0px;
-    padding:0px;
     overflow:hidden;
 
-    .wrapper {
+    .content {
       width:1934px;
       height:525px;
       margin-left: -332px;
@@ -34,6 +34,32 @@ body.prensa {
           border-left: 7px solid black;
           border-right: 7px solid black;
         }
+      }
+    }
+  }
+}
+
+body.quienes_somos {
+
+  .wrapper{
+    width:960px;
+    background-color:black;
+    height:525px;
+    .content {
+      width:500px;
+      margin: 0 auto;
+      h1 {
+        padding-top: 125px;
+        font-style:italic;
+        color:white;
+        font-size:40px;
+        height: 70px;
+      }
+      .texto3 {
+        color: white;
+        line-height: 1.6;
+        font-size: 11px;
+        text-align: justify;
       }
     }
   }

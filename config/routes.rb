@@ -1,7 +1,7 @@
 Monociclo::Application.routes.draw do
 
 
-
+match "quienes-somos" => "static_pages#quienes_somos", :as => :about
 match "prensa" => "static_pages#prensa", :as => :prensa
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
