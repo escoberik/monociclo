@@ -7,7 +7,6 @@ body, #index {
     .wrapper {
       width:960px;
       height:525px;
-      background:url(portadafondo.bmp);
     }
   }
 }
@@ -24,12 +23,17 @@ body, #prensa {
     .wrapper {
       width:1934px;
       height:525px;
-      .imagenes{
+      margin-left: -332px;
+      li {
         display:inline-block;
         list-style:none;
         float:left;
         height:525px;
         width:auto;
+        &.imagenes {
+          border-left: 7px solid black;
+          border-right: 7px solid black;
+        }
       }
     }
   }
