@@ -10,19 +10,25 @@
 }
 body {
   #maindiv {
-  width:960px;
-  margin: 0 auto;
+    width:960px;
+    margin: 0 auto;
     #menu {
       width:960px;
       text-align:center;
       margin-top: 15px;
       height:61px;
-      li {
-        display:inline-block;
-	list-style:none;
-	margin:0px 7px;
-	  img {
-	    vertical-align: middle;
+      ul {
+        display: inline-block;
+        li {
+          display: block;
+          float: left;
+          height: 30px;
+	  list-style: none;
+	  margin:0px 7px;
+	  padding-top: 25px;
+	  &.logo {
+	    padding-top: 0px;
+	    height: 55px;
 	  }
 	  a {
 	    text-decoration:none;
@@ -31,9 +37,11 @@ body {
 	    letter-spacing: 3px; 
 	    color:#B0B0B0;
 	    font-weight:bold;
-	  }
-       }
+          }
+        }
+      }
     }
+
     #footer {
       width:960px;
       #socialbookmarts {

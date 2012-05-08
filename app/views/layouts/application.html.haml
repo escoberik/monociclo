@@ -7,17 +7,18 @@
     = csrf_meta_tags
   %body{ class: "#{params[:controller]} #{params[:action]}" }
     #maindiv
-      %ul#menu
-        %li
-          = link_to "INICIO", root_path
-        %li
-          = link_to "QUIENES SOMOS", about_path
-        %li.logo
-          = image_tag("menucenter.png")
-        %li
-          = link_to "PRENSA", prensa_path
-        %li
-          %a{:href=>""} CONTACTO
+      #menu
+        %ul
+          %li
+            = link_to "INICIO", root_path
+          %li
+            = link_to "QUIENES SOMOS", about_path
+          %li.logo
+            = image_tag("menucenter.png")
+          %li
+            = link_to "PRENSA", prensa_path
+          %li
+            %a{:href=>""} CONTACTO
       =yield
       #footer
         #socialbookmarts
