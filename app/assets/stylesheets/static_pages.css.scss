@@ -41,7 +41,7 @@ body.prensa {
 
 body.quienes_somos {
 
-  .wrapper{
+  .wrapper {
     width:960px;
     background-color:black;
     height:525px;
@@ -60,6 +60,60 @@ body.quienes_somos {
         line-height: 1.6;
         font-size: 11px;
         text-align: justify;
+      }
+    }
+  }
+}
+
+body.contacto {
+
+  .wrapper {
+    width: 960px;
+    background-color:black;
+    height:525px;
+    .content {
+      margin: 0 auto;
+      width: 650px;
+      color: white;
+      h1 {
+        padding-top: 90px;
+        font-size: 40px;
+        padding-left: 145px;
+        padding-bottom: 15px;
+      }
+      .form {
+        float: left;
+        label {
+          display: block;
+          width: 80px;
+          text-align: right;
+          float: left;
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+        li {
+          padding-bottom: 10px;
+        }
+        input {
+          margin-left: 15px;
+          width: 295px;
+        }
+        textarea {
+          margin-left: 15px;
+          height: 130px;
+        }
+      }
+      .text {
+        font-size: 12px;
+        width: 185px;
+        height: 175px;
+        float: right;
+        position: relative;
+        .direccion {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
       }
     }
   }
