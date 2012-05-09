@@ -1,35 +1,34 @@
 @font-face {
   font-family: 'FuturaBT-Book';
-  src:url(FuturaBT-Book.otf);
+  src: url(FuturaBT-Book.otf);
 }
 
-body.index {
+body {
   .wrapper {
-    width:960px;
-    .content {
-      width:960px;
-      height:525px;
+    width: 960px;
+    content: {
+      width: 960px;
+      height: 525px;
     }
   }
+
+  li { list-style: none; }
 }
 
-
 body.prensa {
-
   .wrapper {
-    width:960px;
     overflow:hidden;
 
     .content {
-      width:1934px;
-      height:525px;
+      width: 1934px;
+      height: 525px;
       margin-left: -332px;
+
       li {
-        display:inline-block;
-        list-style:none;
-        float:left;
-        height:525px;
-        width:auto;
+        display: inline-block;
+        float: left;
+        height: 525px;
+        width: auto;
         &.imagenes {
           border-left: 7px solid black;
           border-right: 7px solid black;
@@ -40,21 +39,22 @@ body.prensa {
 }
 
 body.quienes_somos {
-
   .wrapper {
-    width:960px;
     background-color:black;
-    height:525px;
+    height: 525px;
+
     .content {
-      width:500px;
+      width: 500px;
       margin: 0 auto;
+
       h1 {
         padding-top: 125px;
-        font-style:italic;
-        color:white;
-        font-size:40px;
+        font-style: italic;
+        color: white;
+        font-size: 40px;
         height: 70px;
       }
+
       .texto3 {
         color: white;
         line-height: 1.6;
@@ -66,11 +66,9 @@ body.quienes_somos {
 }
 
 body.contacto {
-
   .wrapper {
-    width: 960px;
-    background-color:black;
-    height:525px;
+    background-color: black;
+    height: 525px;
 
     .content {
       margin: 0 auto;
@@ -78,39 +76,41 @@ body.contacto {
       color: white;
       padding-top: 90px;
       position: relative;
-      h1 {
-        width: 400px;
-        font-size: 40px;
-        text-align: right;
-        margin-bottom: 15px;
-        font-style: italic;
-      }
       .form {
         margin-top: 15px;
         float: left;
 
-        label {
-          display: block;
-          width: 85px;
+        h1 {
+          width: 400px;
+          font-size: 40px;
           text-align: right;
-          float: left;
-          text-transform: uppercase;
-          font-size: 12px;
+          margin-bottom: 15px;
+          font-style: italic;
         }
-        li {
-          padding-bottom: 10px;
-        }
-        input[type="text"], textarea {
-          margin-left: 15px;
-          width: 298px;
-          border: inset 1px #f0f0f0;
-        }
-        textarea { height: 130px; }
-        input[type="submit"] {
-          float: right;
-          font-size: 12px;
-          border: none;
-          padding: 2px 4px;
+        form {
+          li {
+            padding-bottom: 10px;
+            label {
+              display: block;
+              width: 85px;
+              text-align: right;
+              float: left;
+              text-transform: uppercase;
+              font-size: 12px;
+            }
+            input[type="text"], textarea {
+              margin-left: 15px;
+              width: 298px;
+              border: inset 1px #f0f0f0;
+            }
+            textarea { height: 130px; }
+          }
+          input[type="submit"] {
+            float: right;
+            font-size: 12px;
+            border: none;
+            padding: 2px 4px;
+          }
         }
       }
       address {
