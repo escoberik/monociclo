@@ -3,17 +3,6 @@
   src: url(FuturaBT-Book.otf);
 }
 
-body {
-  .wrapper {
-    width: 960px;
-    content: {
-      width: 960px;
-      height: 525px;
-    }
-  }
-
-  li { list-style: none; }
-}
 
 body.prensa {
   .wrapper {
@@ -41,8 +30,6 @@ body.prensa {
 body.quienes_somos {
   .wrapper {
     background-color:black;
-    height: 525px;
-
     .content {
       width: 500px;
       margin: 0 auto;
