@@ -1,1 +1,15 @@
-= image_tag("portadafondo.png")
+.gallery
+  = image_tag('portadafondo.png', class: 'placeholder')
+  - 5.times do
+    = image_tag("portadafondo.png", class: 'carousel')
+
+:javascript
+  $(window).load(function() {
+    new App.Views.Gallery({
+      el: '.content',
+      arrows: {
+        left: '/assets/buttons/big_left_arrow.png',
+        right: '/assets/buttons/big_right_arrow.png'
+      }
+    });
+  });
