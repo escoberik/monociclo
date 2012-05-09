@@ -3,6 +3,22 @@
   src: url(FuturaBT-Book.otf);
 }
 
+body {
+  .wrapper {
+    width: 960px;
+    position: relative;
+    .content {
+      width: 960px;
+      height: 525px;
+    }
+    .leftbar, .rightbar {
+      position: absolute;
+      top: 0;
+    }
+    .leftbar { left: 0; }
+    .rightbar { right: 0; }
+  }
+}
 
 body.prensa {
   .wrapper {
@@ -63,6 +79,7 @@ body.contacto {
       color: white;
       padding-top: 90px;
       position: relative;
+      height: auto;
       .form {
         margin-top: 15px;
         float: left;

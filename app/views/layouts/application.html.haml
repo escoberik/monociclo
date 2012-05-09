@@ -19,7 +19,14 @@
             = link_to "PRENSA", prensa_path
           %li
             = link_to "CONTACTO", contacto_path
-      =yield
+
+      .wrapper
+        .content= yield
+        .leftbar
+          = image_tag("barraizquierda.png")
+        .rightbar
+          = image_tag("barraderecha.png")
+
       #footer
         #socialbookmarts
           %li
