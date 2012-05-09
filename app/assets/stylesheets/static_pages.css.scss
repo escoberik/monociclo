@@ -71,21 +71,27 @@ body.contacto {
     width: 960px;
     background-color:black;
     height:525px;
+
     .content {
       margin: 0 auto;
       width: 650px;
       color: white;
+      padding-top: 90px;
+      position: relative;
       h1 {
-        padding-top: 90px;
+        width: 400px;
         font-size: 40px;
-        padding-left: 145px;
-        padding-bottom: 15px;
+        text-align: right;
+        margin-bottom: 15px;
+        font-style: italic;
       }
       .form {
+        margin-top: 15px;
         float: left;
+
         label {
           display: block;
-          width: 80px;
+          width: 85px;
           text-align: right;
           float: left;
           text-transform: uppercase;
@@ -94,26 +100,24 @@ body.contacto {
         li {
           padding-bottom: 10px;
         }
-        input {
+        input[type="text"], textarea {
           margin-left: 15px;
-          width: 295px;
+          width: 298px;
+          border: inset 1px #f0f0f0;
         }
-        textarea {
-          margin-left: 15px;
-          height: 130px;
+        textarea { height: 130px; }
+        input[type="submit"] {
+          float: right;
+          font-size: 12px;
+          border: none;
+          padding: 2px 4px;
         }
       }
-      .text {
+      address {
         font-size: 12px;
-        width: 185px;
-        height: 175px;
-        float: right;
-        position: relative;
-        .direccion {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-        }
+        position: absolute;
+        right: 0;
+        bottom: 32px;
       }
     }
   }

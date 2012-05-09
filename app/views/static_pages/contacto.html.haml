@@ -1,8 +1,8 @@
 .wrapper
   .content
-    %h1
-      Contactanos
     .form
+      %h1
+        Contactanos
       = form_for :contacto do |f|
         %ul
           %li
@@ -14,12 +14,11 @@
           %li
             = f.label :asunto, "Asunto:"
             = f.text_area :asunto
-    .text
-      .direccion
-        %p
-          D: 21 #135A BUENAVISTA
-        %p
-          CP: 97127 Merida, Mexico
-        %p
-          T: 01(999)944.54.50
+        = f.submit 'Enviar'
+    %address
+      D: 21 #135A BUENAVISTA
+      %br
+      CP: 97127 Merida, Mexico
+      %br
+      T: 01(999)944.54.50
     .clear
