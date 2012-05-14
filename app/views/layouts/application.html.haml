@@ -10,15 +10,15 @@
       #menu
         %ul
           %li
-            = link_to "INICIO", root_path
+            = link_to "INICIO", root_path, :class => "inicio"
           %li
-            = link_to "QUIENES SOMOS", about_path
+            = link_to "QUIENES SOMOS", about_path, :class => "about"
           %li.logo
             = image_tag("menucenter.png")
           %li
-            = link_to "PRENSA", prensa_path
+            = link_to "PRENSA", prensa_path, :class => "prensa"
           %li
-            = link_to "CONTACTO", contacto_path
+            = link_to "CONTACTO", contacto_path, :class => "contacto"
 
       .wrapper
         .content= yield

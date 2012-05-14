@@ -1,6 +1,63 @@
 @font-face {
-  font-family: 'FuturaBT-Book';
-  src: url(FuturaBT-Book.otf);
+	font-family: 'FuturaBT-Book';
+	src:url(FuturaBT-Book.otf);
+}
+body {
+  #maindiv {
+    width:960px;
+    margin: 0 auto;
+    #menu {
+      width:960px;
+      text-align:center;
+      margin-top: 15px;
+      height:61px;
+      ul {
+        display: inline-block;
+        li {
+          display: block;
+          float: left;
+          height: 30px;
+	  list-style: none;
+	  margin:0px 7px;
+	  padding-top: 25px;
+	  &.logo {
+	    padding-top: 0px;
+	    height: 55px;
+	  }
+	  a {
+	    text-decoration:none;
+	    font-family: "FuturaBT-Book";	
+	    font-size: 11px;
+	    letter-spacing: 3px; 
+	    color:#B0B0B0;
+	    font-weight:bold;
+	    &:hover {
+	      color: #606060;
+	    }
+          }
+        }
+      }
+    }
+
+    #footer {
+      width:960px;
+      #socialbookmarts {
+        height:30px;
+        width:85px;
+        float: right;
+        text-align:center;
+        margin: 20px 4px;
+
+	li {
+          height:27px;
+          width:27px;
+          display:inline-block;
+          list-style:none;
+          float:left;
+        }
+      }
+    }
+  }      
 }
 
 body {
@@ -20,7 +77,32 @@ body {
   }
 }
 
+body.index {
+  #maindiv {
+    #menu {
+      ul {
+        li {
+          a.inicio {
+            color: #606060;
+          }
+        }
+      }
+    }
+  }
+}
+
 body.prensa {
+  #maindiv {
+    #menu {
+      ul {
+        li {
+          a.prensa {
+            color: #606060;
+          }
+        }
+      }
+    }
+  }
   .wrapper {
     overflow:hidden;
 
@@ -44,6 +126,17 @@ body.prensa {
 }
 
 body.quienes_somos {
+  #maindiv {
+    #menu {
+      ul {
+        li {
+          a.about {
+            color: #606060;
+          }
+        }
+      }
+    }
+  }    
   .wrapper {
     background-color:black;
     .content {
@@ -69,6 +162,17 @@ body.quienes_somos {
 }
 
 body.contacto {
+  #maindiv {
+    #menu {
+      ul {
+        li {
+          a.contacto {
+            color: #606060;
+          }
+        }
+      }
+    }
+  }
   .wrapper {
     background-color: black;
     height: 525px;
@@ -129,4 +233,7 @@ body.contacto {
 
 img.carousel {
   display: none;
+}
+.clear {
+  clear: both;
 }
