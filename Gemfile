@@ -5,6 +5,7 @@ gem 'heroku'
 gem 'therubyracer'
 gem "haml-rails"
 gem 'backbone-on-rails'
+gem 'mercury-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

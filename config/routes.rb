@@ -1,5 +1,7 @@
 Monociclo::Application.routes.draw do
 
+  Mercury::Engine.routes
+
 match "contacto" => "static_pages#contacto", :as => :contacto
 match "quienes-somos" => "static_pages#quienes_somos", :as => :about
 match "prensa" => "static_pages#prensa", :as => :prensa
