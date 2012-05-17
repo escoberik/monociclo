@@ -182,7 +182,6 @@ body.contacto {
       width: 650px;
       color: white;
       padding-top: 90px;
-      position: relative;
       height: auto;
       .form {
         margin-top: 15px;
@@ -223,9 +222,8 @@ body.contacto {
       }
       address {
         font-size: 12px;
-        position: absolute;
-        right: 0;
-        bottom: 32px;
+        float: right; 
+        padding-top: 229px;
       }
     }
   }
