@@ -31,7 +31,7 @@ body {
 	    letter-spacing: 3px; 
 	    color:#B0B0B0;
 	    font-weight:bold;
-	    &:hover {
+	    &:hover, &.active {
 	      color: #606060;
 	    }
           }
@@ -63,10 +63,13 @@ body {
 body {
   .wrapper {
     width: 960px;
+    height: 520px;
     position: relative;
+    overflow: hidden;
     .content {
       width: 960px;
       height: 525px;
+      position: absolute;
     }
     .leftbar, .rightbar {
       position: absolute;
@@ -77,155 +80,94 @@ body {
   }
 }
 
-body.index {
-  #maindiv {
-    #menu {
-      ul {
-        li {
-          a.inicio {
-            color: #606060;
-          }
-        }
-      }
-    }
-  }
-}
+.content.prensa {
+  width: 1934px;
+  height: 525px;
+  margin-left: -332px;
 
-body.prensa {
-  #maindiv {
-    #menu {
-      ul {
-        li {
-          a.prensa {
-            color: #606060;
-          }
-        }
-      }
-    }
-  }
-  .wrapper {
-    overflow:hidden;
-
-    .content {
-      width: 1934px;
-      height: 525px;
-      margin-left: -332px;
-
-      li {
-        display: inline-block;
-        float: left;
-        height: 525px;
-        width: auto;
-        &.imagenes {
-          border-left: 7px solid black;
-          border-right: 7px solid black;
-        }
-      }
-    }
-  }
-}
-
-body.quienes_somos {
-  #maindiv {
-    #menu {
-      ul {
-        li {
-          a.about {
-            color: #606060;
-          }
-        }
-      }
-    }
-  }    
-  .wrapper {
-    background-color:black;
-    .content {
-      width: 500px;
-      margin: 0 auto;
-
-      h1 {
-        padding-top: 125px;
-        font-style: italic;
-        color: white;
-        font-size: 40px;
-        height: 70px;
-      }
-
-      .texto3 {
-        color: white;
-        line-height: 1.6;
-        font-size: 11px;
-        text-align: justify;
-      }
-    }
-  }
-}
-
-body.contacto {
-  #maindiv {
-    #menu {
-      ul {
-        li {
-          a.contacto {
-            color: #606060;
-          }
-        }
-      }
-    }
-  }
-  .wrapper {
-    background-color: black;
+  li {
+    display: inline-block;
+    float: left;
     height: 525px;
+    width: auto;
+    &.imagenes {
+      border-left: 7px solid black;
+      border-right: 7px solid black;
+    }
+  }
+}
 
-    .content {
-      margin: 0 auto;
-      width: 650px;
+.content.quienes_somos {
+  background: black;
+  .text {
+    width: 500px;
+    margin: 0 auto;
+
+    h1 {
+      padding-top: 125px;
+      font-style: italic;
       color: white;
-      padding-top: 90px;
-      height: auto;
-      .form {
-        margin-top: 15px;
-        float: left;
+      font-size: 40px;
+      height: 70px;
+    }
 
-        h1 {
-          width: 400px;
-          font-size: 40px;
+    .texto3 {
+      color: white;
+      line-height: 1.6;
+      font-size: 11px;
+      text-align: justify;
+    }
+  }
+}
+
+.content.contacto {
+  background: black;
+  margin: 0 auto;
+  width: 650px;
+  color: white;
+  padding-top: 90px;
+  height: auto;
+  .form {
+    margin-top: 15px;
+    float: left;
+
+    h1 {
+      width: 400px;
+      font-size: 40px;
+      text-align: right;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    form {
+      li {
+        padding-bottom: 10px;
+        label {
+          display: block;
+          width: 85px;
           text-align: right;
-          margin-bottom: 15px;
-          font-style: italic;
+          float: left;
+          text-transform: uppercase;
+          font-size: 12px;
         }
-        form {
-          li {
-            padding-bottom: 10px;
-            label {
-              display: block;
-              width: 85px;
-              text-align: right;
-              float: left;
-              text-transform: uppercase;
-              font-size: 12px;
-            }
-            input[type="text"], textarea {
-              margin-left: 15px;
-              width: 298px;
-              border: inset 1px #f0f0f0;
-            }
-            textarea { height: 130px; }
-          }
-          input[type="submit"] {
-            float: right;
-            font-size: 12px;
-            border: none;
-            padding: 2px 4px;
-          }
+        input[type="text"], textarea {
+          margin-left: 15px;
+          width: 298px;
+          border: inset 1px #f0f0f0;
         }
+        textarea { height: 130px; }
       }
-      address {
+      input[type="submit"] {
+        float: right;
         font-size: 12px;
-        float: right; 
-        padding-top: 229px;
+        border: none;
+        padding: 2px 4px;
       }
     }
+  }
+  address {
+    font-size: 12px;
+    float: right; 
+    padding-top: 229px;
   }
 }
 
