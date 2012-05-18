@@ -1,25 +1,26 @@
-.form
-  %h1
-    Contactanos
-  = form_for :contacto do |f|
-    %ul
-      %li
-        = f.label :nombre, "Nombre:"
-        = f.text_field :nombre
-      %li
-        = f.label :correo, "Correo:"
-        = f.text_field :correo
-      %li
-        = f.label :asunto, "Asunto:"
-        = f.text_area :asunto
-    = f.submit 'Enviar'
-%address
-  D: 21 #135A BUENAVISTA
-  %br
-  CP: 97127 Merida, Mexico
-  %br
-  T: 01(999)944.54.50
-.clear
+.info
+  .form
+    %h1
+      Contactanos
+    = form_for :contacto do |f|
+      %ul
+        %li
+          = f.label :nombre, "Nombre:"
+          = f.text_field :nombre
+        %li
+          = f.label :correo, "Correo:"
+          = f.text_field :correo
+        %li
+          = f.label :asunto, "Asunto:"
+          = f.text_area :asunto
+      = f.submit 'Enviar'
+  %address
+    D: 21 #135A BUENAVISTA
+    %br
+    CP: 97127 Merida, Mexico
+    %br
+    T: 01(999)944.54.50
+  .clear
 .leftbar
   = image_tag('barra.png')
 .rightbar
