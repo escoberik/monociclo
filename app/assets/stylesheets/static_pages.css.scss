@@ -49,11 +49,27 @@ body {
         margin: 20px 4px;
 
 	li {
-          height:27px;
-          width:27px;
+
           display:inline-block;
           list-style:none;
           float:left;
+          font-size: 0;
+          a {
+            height:27px;
+            width:27px;
+            display: block;
+            padding-top: 6px;
+            &.twitter {
+              background: white url(twitternegativo.png) no-repeat center;
+              padding-top: 10px;
+            }
+            &.facebook {
+              background: white url(facebooknegativo.png) no-repeat center;
+            }
+            &.blogger {
+              background: white url(bloggernegativo.png) no-repeat center;
+            }
+          }
         }
       }
     }
