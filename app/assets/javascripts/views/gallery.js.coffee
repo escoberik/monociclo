@@ -4,6 +4,7 @@ class App.Views.Gallery extends Backbone.View
     'click .arrow.right': 'moveRight'
 
   initialize: ->
+    return  unless @$('.gallery').length > 0
     _.bindAll(this)
     @initStyles()
     @createArrows()

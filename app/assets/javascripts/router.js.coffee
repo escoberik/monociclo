@@ -3,14 +3,14 @@ class App.Router extends Backbone.Router
     '*url': 'visitPage'
 
   visitPage: (url) ->
+    action = (url || 'index').replace('-', '_')
     callback = @initGallery
 
     if $('.content').hasClass('fresh')
       $('.content').removeClass('fresh')
       $("a[href='/#{url}']").addClass('active')
-      callback()
+      callback(action)
     else
-      action = (url || 'index').replace('-', '_')
       $.get url, (html) ->
         $content = $('<div />').attr(class: "content #{action}").html(html)
         $('.wrapper').append($content)
@@ -46,11 +46,11 @@ class App.Router extends Backbone.Router
                   $(el).css(left: 0)
                 else
                   $(el).remove()
-        callback()
+        callback(action)
 
-  initGallery: ->
+  initGallery: (action) ->
     new App.Views.Gallery
-      el: '.content'
+      el: ".content.#{action}"
       arrows:
         left: '/assets/buttons/big_left_arrow.png'
         right: '/assets/buttons/big_right_arrow.png'
