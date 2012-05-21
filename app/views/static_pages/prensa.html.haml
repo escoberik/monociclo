@@ -1,9 +1,4 @@
-.prensa-gallery
-  %ul
-    %li
-      = image_tag("prensa1.png")
-    %li.imagenes
-      = image_tag("prensa2.png")
-    %li
-      = image_tag("prensa3.png")
-
+.gallery
+  = image_tag('prensa.png', class: 'placeholder')
+  - 5.times do
+    = image_tag("prensa.png", class: 'carousel')
