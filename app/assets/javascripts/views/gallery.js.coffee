@@ -24,8 +24,8 @@ class App.Views.Gallery extends Backbone.View
       overflow: 'hidden'
     @$gallery.css
       position: 'absolute'
-      width:  @$img.width() * @$img.length
-      height: @$img.height()
+      width:  960 * @$img.length
+      height: 525
 
   createArrows: ->
     @$arrows =
