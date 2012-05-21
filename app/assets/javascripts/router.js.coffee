@@ -12,7 +12,8 @@ class App.Router extends Backbone.Router
       callback(action)
     else
       $.get url, (html) ->
-        $content = $('<div />').attr(class: "content #{action}").html(html)
+        $content = $(html).find('.content')
+        $content.removeClass('fresh')
         $('.wrapper').append($content)
 
         $start = $('a.active')
