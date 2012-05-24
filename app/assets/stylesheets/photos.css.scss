@@ -1,0 +1,64 @@
+/*
+ *= require_tree ../../../vendor/assets/stylesheets
+*/
+
+body.index {
+  .wrapper {
+    margin: 0 auto;
+    width: 900px;
+
+    padding-top: 20px;
+    .content {
+      background-color: #ECEAE9;
+      min-height: 350px;
+      .album {
+        float: left;
+        margin: 30px;
+        border: 1px solid black;
+        border-bottom: none;
+        h1 {
+          padding: 10px;
+        }
+        ul {
+         padding-top: 10px;
+
+          li {
+            padding: 5px 12px;
+            text-align: center;
+            background-color: #D6D6D6;
+            margin-top: 3px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black; 
+            a {
+              display: block;
+              width: 130px;
+              height: 20px;
+            }
+          }
+        }
+      }
+      .photos {
+        float: right;
+        padding: 30px;
+        max-width: 500px;
+        form {
+          padding-bottom: 20px;
+        }
+        .image {
+          display: inline-block;
+          padding: 5px;
+          position: relative;
+          a {
+            position: absolute;
+            right: 0;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.clear {
+  clear: both;
+}

@@ -5,6 +5,9 @@ Monociclo::Application.routes.draw do
 match "contacto" => "static_pages#contacto", :as => :contacto
 match "quienes-somos" => "static_pages#quienes_somos", :as => :about
 match "prensa" => "static_pages#prensa", :as => :prensa
+
+resources :photos
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

@@ -1,0 +1,57 @@
+!!!
+%html
+  %head
+    %title Monociclo
+    = stylesheet_link_tag    "photos", :media => "all"
+%body{ class: params[:action] }
+.wrapper
+  .content
+    .album
+      %h1
+        Albumes de Fotos
+      %ul
+        %li
+          = link_to "Album 1"
+        %li
+          = link_to "Album 2"
+        %li
+          = link_to "Album 3"
+    .photos
+      = form_tag '', :multipart => true do 
+        = file_field_tag 'picture'
+        = submit_tag
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+      .image
+        = link_to image_tag("boton.png")
+        = image_tag("prueba.gif")
+    .clear
+
