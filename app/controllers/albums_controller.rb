@@ -6,6 +6,9 @@ class AlbumsController < ApplicationController
   end
     
   def create
+    @album = Album.new(params[:album])
+    @album.save
+    render text: "OK"
   end
   
   def show

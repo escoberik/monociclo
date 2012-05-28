@@ -3,12 +3,14 @@
   %head
     %title Monociclo
     = stylesheet_link_tag    "photos", :media => "all"
+    = javascript_include_tag 'photos'
 %body{ class: params[:action] }
 .wrapper
   .content
     .album
       %h1
         Albumes de Fotos
+        = link_to "Nuevo álbum", new_album_path, :class => "new_album"
       %ul
         %li
           = link_to "Album 1"
