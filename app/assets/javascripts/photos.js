@@ -10,4 +10,15 @@ $(document).ready(function() {
     });
     return false;
   });
+  
+  $.getJSON('/albums', function(data) {
+    var $select = $('#albums');
+    var $prompt = $('<option />').text('Seleccione álbum');
+    $select.html($prompt);
+
+    $.each(data, function(i, el) {
+      var $option = $('<option />').attr({ value: el.id }).text(el.title);
+      $select.append($option);
+    });
+  });
 });
