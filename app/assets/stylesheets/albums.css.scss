@@ -1,0 +1,15 @@
+body.new {
+  .photos {
+    max-width: 500px;
+    .image {
+      display: inline-block;
+      position: relative;
+      a {
+        position: absolute;
+        right: 0;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+

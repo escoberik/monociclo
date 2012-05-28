@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Monociclo
+    = stylesheet_link_tag    "albums", :media => "all"
+%body{ class: params[:action] }
+
+= form_for @album do |f|
+  = f.label :title, 'Titulo del Album'
+  = f.text_field :title
+  
+  .photos
+    - @photo.each do |photo|
+      .image
+        = link_to image_tag("boton.png"), photo, :method => :delete
+        = image_tag(photo.photo.url(:medium))
+        = f.fields_for :photos do |g|
+          
