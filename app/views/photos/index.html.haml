@@ -8,9 +8,9 @@
 .wrapper
   .content
     .album
-      %h1
-        Albumes de Fotos
-        = link_to "Nuevo álbum", new_album_path, :class => "new_album"
+      %h1 Albumes de Fotos
+      = link_to "Nuevo álbum", new_album_path, :class => "new_album"
+      = select_tag "Album", "<option>- - Cargando - -</option>".html_safe
       %ul
         %li
           = link_to "Album 1"
