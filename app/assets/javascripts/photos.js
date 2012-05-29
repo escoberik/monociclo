@@ -21,4 +21,15 @@ $(document).ready(function() {
       $select.append($option);
     });
   });
+  
+  $('.image').draggable({
+    cursor: 'move',
+    revert: true
+  });
+  $( '.droppable' ).droppable({
+		drop: function( event, ui ) {
+	    var photo_id = $(ui.draggable).data("id")
+	    alert(photo_id)
+	  }
+  });
 });

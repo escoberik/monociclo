@@ -19,8 +19,11 @@ body.index {
         h1 {
           padding: 10px;
         }
-        ul {
+        .droppable {
          padding-top: 10px;
+         width: 260px;
+         height: 20px;
+         border: 1px solid black;
 
           li {
             padding: 5px 12px;

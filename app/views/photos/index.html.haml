@@ -11,19 +11,14 @@
       %h1 Albumes de Fotos
       = link_to "Nuevo álbum", new_album_path, :class => "new_album"
       = select_tag "albums", "<option>- - Cargando - -</option>".html_safe
-      %ul
-        %li
-          = link_to "Album 1"
-        %li
-          = link_to "Album 2"
-        %li
-          = link_to "Album 3"
+      .droppable
+        
     .photos
       = form_for :photo, :html => { :multipart => true } do |form|
         = form.file_field :photo
         = submit_tag
       - @photo.each do |photo|
-        .image
+        .image{ data: { id: photo.id } }
           = link_to image_tag("boton.png"), photo, :method => :delete
           = image_tag(photo.photo.url(:medium))
 
