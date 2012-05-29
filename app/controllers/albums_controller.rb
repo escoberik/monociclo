@@ -20,4 +20,13 @@ class AlbumsController < ApplicationController
   
   def show
   end
+  
+  def update
+    @photo = Photo.find(params[:photo_id])
+    @album = Album.find(params[:id])
+    
+    @album.photos << @photo
+    render text: "se guardo la foto"
+  end
+  
 end

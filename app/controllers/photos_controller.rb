@@ -23,4 +23,6 @@ class PhotosController < ApplicationController
   redirect_to photos_path
   end
 
+  
+
 end

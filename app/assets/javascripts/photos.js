@@ -28,8 +28,19 @@ $(document).ready(function() {
   });
   $( '.droppable' ).droppable({
 		drop: function( event, ui ) {
-	    var photo_id = $(ui.draggable).data("id")
-	    alert(photo_id)
+		  var $select = $('#albums');
+		  var $selected = $select.find('option:selected');
+	    var photo_id = $(ui.draggable).data("id");
+	    var album_id = parseInt($selected.val());
+	    if (album_id) {
+	      $.post('/albums/' + album_id, {
+	        _method: 'put',
+	        photo_id: photo_id
+	      });
+	    } else {
+	      alert("Por el amor de dios seleccione un album");  
+	    }
+	    var text = photo_id + " " + $selected.val();
 	  }
   });
 });
