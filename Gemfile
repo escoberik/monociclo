@@ -7,6 +7,7 @@ gem "haml-rails"
 gem 'backbone-on-rails'
 gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git', ref: '6d9c99fe20958ed87e4f1a05e9de19825af702ef'
 gem "paperclip", "~> 3.0"
+gem 'jbuilder'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -22,6 +23,7 @@ end
 group :production do
   gem 'pg'
 end
+
 
 
 # Gems used only for assets and not required

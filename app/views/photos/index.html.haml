@@ -11,7 +11,8 @@
       %h1 Albumes de Fotos
       = link_to "Nuevo álbum", new_album_path, :class => "new_album"
       = select_tag "albums", "<option>- - Cargando - -</option>".html_safe
-      .droppable
+      %ul.droppable
+      
         
     .photos
       = form_for :photo, :html => { :multipart => true } do |form|

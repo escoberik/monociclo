@@ -26,6 +26,7 @@ $(document).ready(function() {
     cursor: 'move',
     revert: true
   });
+  
   $( '.droppable' ).droppable({
 		drop: function( event, ui ) {
 		  var $select = $('#albums');
@@ -33,7 +34,7 @@ $(document).ready(function() {
 	    var photo_id = $(ui.draggable).data("id");
 	    var album_id = parseInt($selected.val());
 	    if (album_id) {
-	      $.post('/albums/' + album_id, {
+	      $.post('/albums/' + album_id + ".json", {
 	        _method: 'put',
 	        photo_id: photo_id
 	      });
@@ -42,5 +43,17 @@ $(document).ready(function() {
 	    }
 	    var text = photo_id + " " + $selected.val();
 	  }
+  });
+  
+  $('#albums').bind("change", function(){
+    var $selected = $(this).find('option:selected');
+    var album_id = parseInt($selected.val());
+    $.getJSON('/albums/' + album_id + ".json", function(json) {
+      $.each(json, function(i, el) {
+      var $img = $('<img />').attr({src: el.url});
+      var $li = $('<li />').html($img);
+      $('.droppable').append($li);
+      });
+    });
   });
 });
