@@ -13,14 +13,14 @@ class PhotosController < ApplicationController
 
   
   def create
-  @photo = Photo.create( params[:photo] )
-  redirect_to photos_path
+   @photo = Photo.create( params[:photo] )
+   redirect_to photos_path
   end
   
   def destroy
-  @photo = Photo.find_by_id(params[:id])
-  @photo.destroy
-  redirect_to photos_path
+   @photo = Photo.find_by_id(params[:id])
+   @photo.destroy
+   redirect_to photos_path
   end
 
   

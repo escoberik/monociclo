@@ -22,9 +22,9 @@ body.index {
         .droppable {
          padding-top: 10px;
          width: 260px;
-         height: 20px;
          border: 1px solid black;
          overflow: hidden;
+         min-height: 100px;
 
           li {
             padding: 5px 12px;

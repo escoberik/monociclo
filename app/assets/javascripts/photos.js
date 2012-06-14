@@ -38,6 +38,15 @@ $(document).ready(function() {
 	        _method: 'put',
 	        photo_id: photo_id
 	      });
+	      $('.droppable li').remove()
+                $.getJSON('/albums/' + album_id + ".json", function(json) {
+                $.each(json, function(i, el) {
+                var $img = $('<img />').attr({src: el.url});
+                var $li = $('<li />').html($img);
+                $('.droppable').append($li);
+                });
+              });
+
 	    } else {
 	      alert("Por el amor de dios seleccione un album");  
 	    }
@@ -48,10 +57,18 @@ $(document).ready(function() {
   $('#albums').bind("change", function(){
     var $selected = $(this).find('option:selected');
     var album_id = parseInt($selected.val());
+    $('.droppable li').remove()
+
     $.getJSON('/albums/' + album_id + ".json", function(json) {
       $.each(json, function(i, el) {
+
+      var $li = $('<li />')
+      var $a = $('<a />').attr({href: '/photos/' + el.id, method: 'delete'});
+      $a.append($('<img />').attr({src: '/assets/boton.png'}))
       var $img = $('<img />').attr({src: el.url});
-      var $li = $('<li />').html($img);
+      $li.append($a);
+      $li.append($img);
+      
       $('.droppable').append($li);
       });
     });
