@@ -8,6 +8,7 @@ match "prensa" => "static_pages#prensa", :as => :prensa
 
 resources :photos
 resources :albums
+resources :album_photos 
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

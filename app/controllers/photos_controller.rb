@@ -6,7 +6,6 @@ class PhotosController < ApplicationController
   
   def show
     @photo = Photo.find(params[:id])
-    @photo.destroy
     
     redirect_to photos_path
   end
@@ -18,11 +17,8 @@ class PhotosController < ApplicationController
   end
   
   def destroy
-   @photo = Photo.find_by_id(params[:id])
+   @photo = Photo.find_by_id(params[:id])   
    @photo.destroy
    redirect_to photos_path
   end
-
-  
-
 end

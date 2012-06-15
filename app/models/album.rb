@@ -1,5 +1,6 @@
 class Album < ActiveRecord::Base
   attr_protected nil
-  has_and_belongs_to_many :photos
+  has_many :album_photos 
+  has_many :photos, :through => :album_photos
   accepts_nested_attributes_for :photos
 end
