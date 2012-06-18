@@ -6,6 +6,7 @@ gem 'therubyracer'
 gem "haml-rails"
 gem 'backbone-on-rails'
 gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git', ref: '6d9c99fe20958ed87e4f1a05e9de19825af702ef'
+gem 'aws-sdk'
 gem "paperclip", "~> 3.0"
 gem 'jbuilder'
 
