@@ -1,0 +1,20 @@
+development: &local_settings
+  storage: "#{:filesystem}"
+  url: "/uploads/:class-:attachment/:style/:id.:extension"
+  path: ":rails_root/public:url"
+
+test:
+  <<: *local_settings
+  url: "/tmp/:class-:attachment/:style/:id.:extension"
+
+staging:
+  storage: ':s3'
+  bucket: "jade_development"
+  url: "#{Rails.app_name}/:class-:attachment/:style/:id.:extension"
+  path: "#{Rails.app_name}/:class-:attachment/:style/:id.:extension"
+
+production:
+  storage: ':s3'
+  bucket: "jade_#{Rails.app_name}"
+  url: ":class-:attachment/:style/:id.:extension"
+  path: ":class-:attachment/:style/:id.:extension"

@@ -1,7 +1,9 @@
-/config/*.yml
+/config/database.yml
 .rvmrc
 *.swp
 /.bundle
 /log/*.log
 /tmp
 /public/system
+/public/uploads
+*.DS_Store
