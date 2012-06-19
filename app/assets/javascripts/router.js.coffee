@@ -4,6 +4,8 @@ class App.Router extends Backbone.Router
 
   visitPage: (url) ->
     action = (url || 'index').replace('-', '_')
+    return  if action == 'photos'
+
     callback = @initGallery
 
     if $('.content').hasClass('fresh')
