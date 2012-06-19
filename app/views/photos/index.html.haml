@@ -2,8 +2,8 @@
 %html
   %head
     %title Monociclo
-    = stylesheet_link_tag    "photos", :media => "all"
-    = javascript_include_tag 'photos'
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag 'application'
 %body{ class: params[:action] }
 .wrapper
   .content
@@ -12,8 +12,6 @@
       = link_to "Nuevo álbum", new_album_path, :class => "new_album"
       = select_tag "albums", "<option>- - Cargando - -</option>".html_safe
       %ul.droppable
-      
-        
     .photos
       = form_for :photo, :html => { :multipart => true } do |form|
         = form.file_field :photo
