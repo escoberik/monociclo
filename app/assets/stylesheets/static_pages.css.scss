@@ -2,7 +2,7 @@
 	font-family: 'FuturaBT-Book';
 	src:url(FuturaBT-Book.otf);
 }
-body {
+body.static_pages {
   #maindiv {
     width:960px;
     margin: 0 auto;
@@ -85,10 +85,10 @@ body {
         }
       }
     }
-  }      
+  }
 }
 
-body {
+body.static_pages {
   .wrapper {
     width: 960px;
     height: 520px;
