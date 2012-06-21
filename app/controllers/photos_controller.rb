@@ -21,13 +21,9 @@ class PhotosController < ApplicationController
   end
 
   def destroy
-   @photo = Photo.find_by_id(params[:id])
+   @photo = Photo.find(params[:id])
    @photo.destroy
 
-   if request.xhr?
-     render partial: 'photo', locals: { photo: @photo }
-   else
-     redirect_to photos_path
-   end
+   render text: 'ok'
   end
 end

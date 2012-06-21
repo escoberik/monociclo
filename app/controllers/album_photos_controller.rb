@@ -1,20 +1,22 @@
 class AlbumPhotosController < ApplicationController
-  def show
-    @album = Album.find(params[:id])
+  before_filter :find_album, only: [:index, :create]
+  layout false
+
+  def create
+    @album_photo = @album.album_photos.create(photo: Photo.find(params[:photo_id]))
+
+    render partial: 'album_photo', locals: { album_photo: @album_photo }
   end
-  
-  def update
-    @photo = Photo.find(params[:photo_id])
-    @album = Album.find(params[:id])
-    
-    @album.photos << @photo
-    render text: "ok"
-  end
-  
+
   def destroy
     @album_photo = AlbumPhoto.find(params[:id])
     @album_photo.destroy
-    redirect_to photos_path
+
+    render text: "ok"
   end
-  
+
+private
+  def find_album
+    @album = Album.find(params[:album_id])
+  end
 end

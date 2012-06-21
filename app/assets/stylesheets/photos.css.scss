@@ -11,6 +11,26 @@ body.photos {
       background-color: #ECEAE9;
       min-height: 350px;
       padding: 30px;
+      .image {
+        float: left;
+        padding: 5px;
+        background: white;
+        border-radius: 5px;
+        position: relative;
+        height: 100px;
+        width: 100px;
+        margin: 0 5px 5px 0;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        a {
+          position: absolute;
+          right: 4px;
+          top: 4px;
+        }
+      }
+      li.image {
+        float: none;
+        margin: 10px auto;
+      }
       .album {
         float: left;
         border-radius: 5px;
@@ -26,6 +46,7 @@ body.photos {
          border: 1px solid black;
          overflow: hidden;
          min-height: 100px;
+         display: none;
 
           li {
             padding: 5px 12px;
@@ -59,20 +80,6 @@ body.photos {
           background: #ECEAE9;
           border-radius: 2px;
           padding: 10px;
-          .image {
-            float: left;
-            padding: 5px;
-            background: white;
-            border-radius: 5px;
-            position: relative;
-            height: 100px;
-            margin: 0 5px 5px 0;
-            a {
-              position: absolute;
-              right: 4px;
-              top: 4px;
-            }
-          }
         }
       }
     }

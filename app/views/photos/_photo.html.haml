@@ -1,3 +1,3 @@
 .image{ data: { id: photo.id } }
-  = link_to image_tag("boton.png"), photo, :method => :delete
+  = link_to image_tag("boton.png"), photo, class: 'delete'
   = image_tag photo.photo

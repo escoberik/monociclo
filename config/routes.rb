@@ -7,8 +7,10 @@ match "quienes-somos" => "static_pages#quienes_somos", :as => :about
 match "prensa" => "static_pages#prensa", :as => :prensa
 
 resources :photos
-resources :albums
-resources :album_photos 
+resources :albums do
+  resources :photos, controller: 'AlbumPhotos', only: [:index, :create]
+end
+resources :album_photos, only: :destroy
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
