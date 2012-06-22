@@ -47,6 +47,7 @@ gem "jquery-fileupload-rails"
 
 # To use Jbuilder templates for JSON
 gem 'jbuilder'
+gem 'jade-utilities', git: 'git://github.com/erik-escobedo/jade_utilities.git'
 
 # Use unicorn as the app server
 # gem 'unicorn'

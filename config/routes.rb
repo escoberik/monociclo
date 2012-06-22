@@ -10,7 +10,7 @@ resources :photos
 resources :albums do
   resources :photos, controller: 'AlbumPhotos', only: [:index, :create]
 end
-resources :album_photos, only: :destroy
+resources :album_photos, only: [:update, :destroy]
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

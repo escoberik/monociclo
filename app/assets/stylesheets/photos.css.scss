@@ -31,6 +31,9 @@ body.photos {
         float: none;
         margin: 10px auto;
       }
+      .album-photos {
+        position: relative;
+      }
       .album {
         float: left;
         border-radius: 5px;

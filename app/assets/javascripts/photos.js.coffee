@@ -84,8 +84,12 @@ class PhotosManager
       return
 
     photo_id = $(ui.draggable).data('id')
-    $.post "/albums/#{album_id}/photos", photo_id: photo_id, (html) ->
-      $('.album-photos').prepend(html)
+    $.post "/albums/#{album_id}/photos",
+      album_photo:
+        photo_id: photo_id
+        position: 1
+      , (html) ->
+        $('.album-photos').prepend(html)
 
   loadSelectedAlbum: ->
     album_id  = parseInt @$select_album.find('option:selected').val()
@@ -93,5 +97,15 @@ class PhotosManager
 
     $.get "/albums/#{album_id}/photos", (html) ->
       $('.album-photos').replaceWith(html)
+      $('.album-photos').sortable
+        axis: 'y'
+        cursor: 'move'
+        stop: (e, ui) ->
+          position = $('.album-photos li').index($(ui.item)) + 1
+          id = $(ui.item).data('id')
+          $.post "/album_photos/#{id}",
+            _method: 'put'
+            album_photo:
+              position: position
 
 $(document).ready -> new PhotosManager

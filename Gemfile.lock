@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/erik-escobedo/jade_utilities.git
+  revision: e01eebe4580bf76bfe0dc6dfaf18ca1a2305266a
+  specs:
+    jade-utilities (0.1.0)
+      activerecord (~> 3.0)
+
+GIT
   remote: https://github.com/jejacks0n/mercury.git
   revision: 6d9c99fe20958ed87e4f1a05e9de19825af702ef
   ref: 6d9c99fe20958ed87e4f1a05e9de19825af702ef
@@ -177,6 +184,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   haml-rails
   heroku
+  jade-utilities!
   jbuilder
   jquery-fileupload-rails
   jquery-rails

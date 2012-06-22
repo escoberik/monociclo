@@ -11,11 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120524202103) do
+ActiveRecord::Schema.define(:version => 20120622000051) do
 
   create_table "album_photos", :force => true do |t|
     t.integer "album_id"
     t.integer "photo_id"
+    t.integer "position"
   end
 
   create_table "albums", :force => true do |t|
