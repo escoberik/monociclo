@@ -1,4 +1,8 @@
 Monociclo::Application.routes.draw do
+  constraints(host: '1808.com.mx') do
+    root to: redirect('http://www.1808.com.mx')
+    match '/*path', to: redirect { |params| "http://www.example.com/#{params[:path]}" }
+  end
 
   Mercury::Engine.routes
 
