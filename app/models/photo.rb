@@ -9,6 +9,12 @@ class Photo < ActiveRecord::Base
     }
 
   def self.for_page(page_name)
-    Album.find_by_title(page_name).album_photos.order('position').map(&:photo)
+    album = Album.find_by_title(page_name)
+
+    if album.blank?
+      []
+    else
+      album.album_photos.order('position').map(&:photo)
+    end
   end
 end
