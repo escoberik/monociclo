@@ -7,4 +7,8 @@ class Photo < ActiveRecord::Base
     styles: {
       thumb: '100x100#'
     }
+
+  def self.for_page(page_name)
+    Album.find_by_title(page_name).album_photos.order('position').map(&:photo)
+  end
 end

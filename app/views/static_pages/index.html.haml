@@ -1,4 +1,3 @@
 .gallery
-  = image_tag('portadafondo.png', class: 'placeholder')
-  - 5.times do
-    = image_tag("portadafondo.png", class: 'carousel')
+  - @photos.each do |photo|
+    = image_tag photo.photo.url(:original), class: 'carousel'
