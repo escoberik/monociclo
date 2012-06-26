@@ -9,7 +9,6 @@
     .content
       .album
         %h1 Albumes de Fotos
-        = link_to "Nuevo álbum", new_album_path, :class => "new_album"
         = select_tag "albums", "<option>- - Cargando - -</option>".html_safe
         .droppable
         %ul.album-photos
