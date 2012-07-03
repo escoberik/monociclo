@@ -23,7 +23,6 @@ class App.Router extends Backbone.Router
         $start.removeClass('active')
         $end.addClass('active')
         d = if $start.parent().index() - $end.parent().index() < 0 then 'right' else 'left'
-
         switch d
           when 'right'
             $content.css

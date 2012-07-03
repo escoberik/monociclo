@@ -11,6 +11,8 @@ class App.Views.Gallery extends Backbone.View
     @showHideArrows()
     @page  = 1
     @total = @$img.length
+    @totaltotal = @total-1
+    @totalwidth = @totaltotal*960
 
   initStyles: ->
     @$gallery = @$('.gallery')
@@ -54,12 +56,20 @@ class App.Views.Gallery extends Backbone.View
     false
 
   moveRight: ->
-    if !@moving && @page < @total
+    if @page < @total
       @moving = true
       @$gallery.animate
         left: "-=#{@$img.width()}"
       , (->
         @page += 1
+        @moving = false
+      ).bind(this)
+    else
+      @moving = true
+      @$gallery.animate
+        left: "+=#{@totalwidth}"
+      , (->
+        @page -= @totaltotal
         @moving = false
       ).bind(this)
     false
