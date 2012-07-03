@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+  before_filter :authenticate
+  
   def index
     @photos = Photo.all
     render layout: false
@@ -25,5 +27,13 @@ class PhotosController < ApplicationController
    @photo.destroy
 
    render text: 'ok'
+  end
+
+protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+    username == "sergio" && password == "glenn_jade"
+    end
   end
 end
