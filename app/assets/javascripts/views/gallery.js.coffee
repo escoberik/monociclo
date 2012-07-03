@@ -56,7 +56,7 @@ class App.Views.Gallery extends Backbone.View
     false
 
   moveRight: ->
-    if @page < @total
+    if !@moving && @page < @total
       @moving = true
       @$gallery.animate
         left: "-=#{@$img.width()}"
@@ -64,7 +64,7 @@ class App.Views.Gallery extends Backbone.View
         @page += 1
         @moving = false
       ).bind(this)
-    else
+    else if !@moving && @page == @total
       @moving = true
       @$gallery.animate
         left: "+=#{@totalwidth}"
