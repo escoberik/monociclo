@@ -55,6 +55,7 @@ class PhotosManager
       $(this).css(marginRight: 0)
       $(this).after($clear())
     $('.repo').append($clear())
+    @changeColor()
 
   makeDraggable: ($img) ->
     $img.draggable
@@ -76,6 +77,8 @@ class PhotosManager
         $image.animate(opacity: 1, 'slow')
         self.renderGrid()
         self.makeDraggable($image)
+        
+        
 
   createAlbumPhoto: (e, ui) ->
     self = this
