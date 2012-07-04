@@ -1,3 +1,8 @@
-.image{ data: { id: photo.id } }
-  = link_to image_tag("boton.png"), photo, class: 'delete'
-  = image_tag photo.photo
+- if photo.resize == true
+  .image.resized{ data: { id: photo.id } }
+    = link_to image_tag("boton.png"), photo, class: 'delete'
+    = image_tag photo.photo
+- else
+  .image{ data: { id: photo.id } }
+    = link_to image_tag("boton.png"), photo, class: 'delete'
+    = image_tag photo.photo

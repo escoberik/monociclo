@@ -12,6 +12,7 @@ class PhotosManager
     @loadAlbums()
     @initUploader()
     @makeDraggable $('.image')
+    @changeColor()
 
   listenEvents: ->
     $('.new_album').bind 'click', @createAlbum
@@ -107,5 +108,8 @@ class PhotosManager
             _method: 'put'
             album_photo:
               position: position
-
+  
+  changeColor: ->
+    $('.repo').find('.resized').css('background','red') 
+  
 $(document).ready -> new PhotosManager

@@ -1,3 +1,6 @@
 .gallery
   - @photos.each do |photo|
-    = image_tag photo.photo.url(:original), class: 'carousel'
+    - if photo.resize == true 
+      = image_tag photo.photo.url(:resize), class: 'carousel'
+    - else
+      = image_tag photo.photo.url(:original), class: 'carousel' 

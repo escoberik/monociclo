@@ -72,8 +72,13 @@ body.photos {
         border-radius: 5px;
         background: white;
         padding: 10px;
-        form {
+        .checkbox{
+          font-size: 10px;
           float: right;
+          marign-top: 5px;
+        }
+        form {
+          float: left;
           padding-bottom: 10px;
         }
         .repo {

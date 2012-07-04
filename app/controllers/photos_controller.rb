@@ -14,6 +14,8 @@ class PhotosController < ApplicationController
 
   def create
    @photo = Photo.create( params[:photo] )
+   @photo.resize = params[:resize]
+   @photo.save
 
    if request.xhr?
      render partial: 'photo', locals: { photo: @photo }

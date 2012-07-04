@@ -15,6 +15,8 @@
 
       .photos
         = form_for :photo, :html => { :multipart => true } do |form|
+          .checkbox autoajustar imagen (960x525px)
           = form.file_field :photo
+          = check_box_tag 'resize'
         .repo= render @photos
       .clear

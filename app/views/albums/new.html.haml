@@ -13,6 +13,6 @@
     - @photo.each do |photo|
       .image
         = link_to image_tag("boton.png"), photo, :method => :delete
-        = image_tag(photo.photo.url(:medium))
+        = image_tag(photo.photo.url(:thumb))
         = f.fields_for :photos do |g|
           
