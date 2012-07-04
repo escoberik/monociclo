@@ -35,8 +35,8 @@ protected
 
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-    username == "sergio" && password == "glenn_jade"
-    username == "abbyvalo" && password == "valo1808"
+      (username == "sergio" && password == "glenn_jade") ||
+      (username == "abbyvalo" && password == "valo1808")
     end
   end
 end
