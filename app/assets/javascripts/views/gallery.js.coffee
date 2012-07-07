@@ -53,6 +53,14 @@ class App.Views.Gallery extends Backbone.View
         @page -= 1
         @moving = false
       ).bind(this)
+    else if !@moving && @page == 1
+      @moving = true
+      @$gallery.animate
+        left: "-=#{@totalwidth}"
+      , (->
+        @page += @totaltotal
+        @moving = false
+      ).bind(this) 
     false
 
   moveRight: ->
