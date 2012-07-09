@@ -10,6 +10,7 @@ match "contacto" => "static_pages#contacto", :as => :contacto
 match "quienes-somos" => "static_pages#quienes_somos", :as => :about
 match "prensa" => "static_pages#prensa", :as => :prensa
 
+resources :contacts
 resources :photos
 resources :albums do
   resources :photos, controller: 'AlbumPhotos', only: [:index, :create]

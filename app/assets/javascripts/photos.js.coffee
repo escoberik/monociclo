@@ -113,6 +113,6 @@ class PhotosManager
               position: position
   
   changeColor: ->
-    $('.repo').find('.resized').css('background','red') 
+    $('.repo').find('.resized').css('background','gray') 
   
 $(document).ready -> new PhotosManager

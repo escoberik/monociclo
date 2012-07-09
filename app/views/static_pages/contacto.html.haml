@@ -1,8 +1,8 @@
 .info
   .form
     %h1
-      Contactanos
-    = form_for :contacto do |f|
+      Contáctanos
+    = form_for :contact, :url => contacts_path do |f|
       %ul
         %li
           = f.label :nombre, "Nombre:"
@@ -14,6 +14,7 @@
           = f.label :asunto, "Asunto:"
           = f.text_area :asunto
       = f.submit 'Enviar'
+  %p.notice= flash[:notice]
   %address
     D: 21 #135A BUENAVISTA
     %br

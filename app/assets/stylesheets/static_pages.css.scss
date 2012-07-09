@@ -42,8 +42,8 @@ body.static_pages {
     #footer {
       width:960px;
       #creditos {
-        font-family: "Times New Roman";
-        font-size: 8px;
+        font-family: Century Gothic, sans-serif !important;
+        font-size: 9px;
         float: left;
         margin-top: 27px;
         color: #6D6E71;
@@ -133,6 +133,9 @@ body.static_pages {
   .text {
     width: 500px;
     margin: 0 auto;
+    p {
+      font-family: Century Gothic, sans-serif !important;
+    }
 
     h1 {
       padding-top: 125px;
@@ -145,7 +148,7 @@ body.static_pages {
     .texto3 {
       color: white;
       line-height: 1.6;
-      font-size: 11px;
+      font-size: 13px;
       text-align: justify;
     }
   }
@@ -176,6 +179,7 @@ body.static_pages {
       form {
         li {
           padding-bottom: 10px;
+          font-family: Century Gothic, sans-serif !important;
           label {
             display: block;
             width: 85px;
@@ -199,10 +203,18 @@ body.static_pages {
         }
       }
     }
+    p {
+      font-size: 12px;
+      font-family: Century Gothic, sans-serif !important;
+      position: absolute;
+      right: 140px;
+      top: 161px;
+    }
     address {
       font-size: 12px;
       float: right; 
       padding-top: 229px;
+      font-family: Century Gothic, sans-serif !important;
     }
   }
 }
