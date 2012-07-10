@@ -7,6 +7,7 @@
     = csrf_meta_tags
     %link{:href => "/assets/favicon.ico", :rel => "shortcut icon"}
     %meta{:name => "18.08 Suite de Mode", :content => "18.08 Suite de Mode"}
+    %meta{:property => "og:title", :content => "18.08 Suite de Mode"}
   %body{ class: params[:controller] }
     #maindiv
       #menu
@@ -28,7 +29,7 @@
       #footer
         #creditos
           %strong "18.08 suite de mode"; Mérida, Yucatán, 2012.
-          Diseño: Monocilo Estudio Creativo. Programación.: Código Jade.  
+          Diseño: Monociclo Estudio Creativo. Programación.: Código Jade.  
         #socialbookmarts
           %li
             = link_to image_tag("twitter.png"), "http://twitter.com/1808suitedemode", :class => "twitter"
