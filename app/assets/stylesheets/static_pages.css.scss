@@ -23,6 +23,9 @@ body.static_pages {
 	  &.logo {
 	    padding-top: 0px;
 	    height: 55px;
+	    img {
+	      width: 355px;
+	    }
 	  }
 	  a {
 	    text-decoration:none;
@@ -127,13 +130,13 @@ body.static_pages {
 }
 
 .content.quienes_somos {
-  font-family: Georgia, Serif !important;
-  background: black;
+  font-family: Century Gothic;
+  background: RGB(192,192,192);
   .text {
     width: 500px;
     margin: 0 auto;
     p {
-      font-family: Century Gothic, sans-serif !important;
+      font-family: Century Gothic !important;
     }
 
     h1 {
@@ -154,8 +157,8 @@ body.static_pages {
 }
 
 .content.contacto {
-  font-family: Georgia, Serif !important;
-  background: black;
+  font-family: Century Gothic !important;
+  background: RGB(192,192,192);
   margin: 0 auto;
   width: 650px;
   color: white;
@@ -178,7 +181,7 @@ body.static_pages {
       form {
         li {
           padding-bottom: 10px;
-          font-family: Century Gothic, sans-serif !important;
+          font-family: Century Gothic !important;
           label {
             display: block;
             width: 85px;
@@ -204,7 +207,7 @@ body.static_pages {
     }
     p {
       font-size: 12px;
-      font-family: Century Gothic, sans-serif !important;
+      font-family: Century Gothic !important;
       position: absolute;
       right: 140px;
       top: 161px;
@@ -213,7 +216,7 @@ body.static_pages {
       font-size: 12px;
       float: right; 
       padding-top: 229px;
-      font-family: Century Gothic, sans-serif !important;
+      font-family: Century Gothic !important;
     }
   }
 }
